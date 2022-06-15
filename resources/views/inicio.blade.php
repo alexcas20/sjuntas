@@ -99,6 +99,7 @@
     </div>
     {{--Fin fila formulario--}}
     
+    {{--Inicia tabla BD--}}
 </div>
 <div class="pt-5">
 <table class="table table-striped">
@@ -121,9 +122,10 @@
         <td>{{$item->horadtermino}}</td>
         <td>
 
-         
+         // Referencia a ventana Editar
             <a href="{{route('editar', $item->id)}}" class="btn btn-warning">Editar</a>
-           
+            
+            //Proceso de finalizar/eliminar registro
             <form action="{{route('eliminar', $item->id)}}" method="POST" class="d-inline">
                 @method('DELETE')
                 @csrf

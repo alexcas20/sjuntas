@@ -1,6 +1,8 @@
 @extends('plantilla')
 
 @section('content')
+
+{{--Ventana Editar--}}
     <h3 class="text-center mb-3 pt-3">Actualizar {{$salaActualizar->id}}</h3>
 
     <form action="{{route('update', $salaActualizar->id)}}" method="POST">
